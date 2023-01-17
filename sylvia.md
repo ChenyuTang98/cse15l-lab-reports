@@ -15,4 +15,4 @@ Now try running some commands both on your computer, and on the remote computer 
 * You can use commands such as `cd` `ls` `pwd` `mkdir` `cp`, a few times in different ways.
 * Here I used `ls -lat` `ssh ls -lat` `ls -a`, and below would be my results of what I typed in.
 * Finally, to log out of the remote server in your terminal, you could use either Ctrl-D or run the command `exit`.
-![Image](Screenshot 2023-01-11 at 3.43.39 PM.png)
+![Image](Screenshot 2023-01-11 at 3.19.45 PM.png)
