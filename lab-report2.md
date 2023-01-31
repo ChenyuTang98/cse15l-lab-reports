@@ -67,6 +67,7 @@ class StringServer {
 * The symptom, as the output of running the tests: The symptom tested for the testReversed1 method was “arrays first differed at element [0]; expected:<4> but was:<0>”
 ![Image](lab2-3.png)
 * The bug, as the before-and-after code change required to fix it: 
+
 before:
 ```
 static int[] reversed(int[] arr) {
