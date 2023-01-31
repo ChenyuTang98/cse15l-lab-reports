@@ -49,19 +49,45 @@ class StringServer {
 
 # Part2
 * A failure-inducing input for the buggy program, as a JUnit test and any associated code:
+```
+@Test
+  public void testReversed1() {
+    int[] input1 = {1, 2, 3, 4};
+    assertArrayEquals(new int[]{4, 3, 2, 1}, ArrayExamples.reversed(input1));
+  }
+```
 * An input that doesn’t induce a failure, as a JUnit test and any associated code:
-* The symptom, as the output of running the tests:
-* The bug, as the before-and-after code change required to fix it:
-![Image](cse15lab1-2.png)
+```
+@Test
+  public void testReversed2() {
+    int[] input1 = {0, 0, 0, 0};
+    assertArrayEquals(new int[]{0, 0, 0, 0}, ArrayExamples.reversed(input1));
+  }
+```
+* The symptom, as the output of running the tests: The symptom tested for the testReversed1 method was “arrays first differed at element [0]; expected:<4> but was:<0>”
+![Image](lab2-3.png)
+* The bug, as the before-and-after code change required to fix it: 
+before:
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }
+```
+after:
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+  }
+```
+* Briefly describe why the fix addresses the issue: first I switched the left hand side and right hand side of the assignment so that the values in arr are assigned to the newArray in reverse order. Then I changed the return statement to make it return the newArray instead of arr. 
  
 # Part3
-Now try running some commands both on your computer, and on the remote computer (following after ssh by using the terminal in VScode).
-* You can use commands such as `cd` `ls` `pwd` `mkdir` `cp`, a few times in different ways.
- 1. cd - switch the current working directory to the given path
- 2. ls - lists the files and folders for the given path
- 3. pwd - prints the current working directory
- 4. mkdir - makes a new directory
- 5. cp - create a copy of the contents of the file
-* Here I used `ls -lat` `ssh ls -lat` `ls -a`, and below would be my results of what I typed in.
-* Finally, to log out of the remote server in your terminal, you could use either Ctrl-D or run the command `exit`.
-![Image](cse15lab1-3.png)
+The most important thing I learned is definitely writing the tester. It's really useful and necessary to see if there's any mistake on my code and why is that. Second thing is the URLHandler Interface and biuld URLs with paths and queries on the running server, though I still can't be sure how this exactly works and if I could do the codes right, but I have a much deeper understaning with the getquery() and split to check the parameter array index's value, and thus do the number increment or string printing. Also, using git and bash to connect to remote server and run on it.
