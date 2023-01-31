@@ -45,7 +45,7 @@ class StringServer {
 ![Image](lab2-2.png)
 * Which methods in your code are called: the main method and the handleRequest method are called.
 * What are the relevant arguments to those methods, and the values of any relevant fields of the class: First, it checks in the main method to see if the args is empty, if it's empty then print the "missing port number" message, otherwise the handleRequest method is called. If url's path doesn't contain "/add-message", then the "Invalid input!" is returned. The relevant values would be the url, args and parameters.
-* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why: values of the parameters string array got changed. The values of the string array args stay the same, same as "4010" since I didn't change the port. But the got changed and it now contains "s", "hello", "how are you" and "Chenyu".
+* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why: values of the parameters string array got changed. The values of the string array args stay the same, same as "4010" since I didn't change the port. But the parameters got changed and it now contains one more "Chenyu".
 
 # Part2
 * A failure-inducing input for the buggy program, as a JUnit test and any associated code:
