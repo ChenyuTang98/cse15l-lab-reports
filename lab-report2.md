@@ -1,4 +1,41 @@
 # Part1
+My code StringServer:
+```
+import java.io.IOException;
+import java.net.URI;
+
+class Handler implements URLHandler {
+    // The one bit of state on the server: a number that will be manipulated by
+    // various requests.
+    private String concatenatedString = "";
+
+    public String handleRequest(URI url) {
+            System.out.println("Path: " + url.getPath());
+            if (url.getPath().contains("/add-message")) {
+                String[] parameters = url.getQuery().split("=");
+                if (parameters[0].equals("s")) {
+                        concatenatedString += parameters[1] + "\n";
+                        return concatenatedString;
+                }
+            }
+            return "Invalid input!";
+
+        }
+}
+
+class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+```
 ![Image](lab2-1.png)
 * Which methods in your code are called?
 * What are the relevant arguments to those methods, and the values of any relevant fields of the class?
@@ -9,7 +46,6 @@
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 
 # Part2
-Here we would use VScode to connect to a remote computer over the Internet to do work there.
 * For Windows user, you first need to install git.
  1. Open Visual Studio Code and use the Terminal -> New Terminal menu to open the terminal.
  2. Open the command using ctrl + shift + P.
