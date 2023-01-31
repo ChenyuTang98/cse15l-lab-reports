@@ -36,8 +36,9 @@ class StringServer {
     }
 }
 ```
+
 ![Image](lab2-1.png)
-* Which methods in your code are called?
+* Which methods in your code are called? 
 * What are the relevant arguments to those methods, and the values of any relevant fields of the class?
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 ![Image](lab2-2.png)
@@ -46,13 +47,10 @@ class StringServer {
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
 
 # Part2
-* For Windows user, you first need to install git.
- 1. Open Visual Studio Code and use the Terminal -> New Terminal menu to open the terminal.
- 2. Open the command using ctrl + shift + P.
- 3. Select Default Profile and select Git Bash from the options and then click on the + icon in the terminal window.
- 4. The new terminal now will be a Git Bash terminal.
-* Then, to use ssh, open a terminal in VScode. Use the command `$ ssh cs15lwi23zz@ieng6.ucsd.edu`. "zz" should be replaced with the letter that everyone have a unique course-specific account. To connect remotely, you will need to find your own course-specific account, which can be found by this website [Link](https://sdacs.ucsd.edu/~icc/index.php) and reset your password. 
-* If it's the first time you’ve connected to this server, you will probably get a message saying authenticity can't be established. Just type `yes` and press Enter, and then type in your password for this account. Now if you're logged in, you would see things as below:
+* A failure-inducing input for the buggy program, as a JUnit test and any associated code:
+* An input that doesn’t induce a failure, as a JUnit test and any associated code:
+* The symptom, as the output of running the tests:
+* The bug, as the before-and-after code change required to fix it:
 ![Image](cse15lab1-2.png)
  
 # Part3
