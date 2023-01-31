@@ -38,13 +38,14 @@ class StringServer {
 ```
 
 ![Image](lab2-1.png)
-* Which methods in your code are called? 
-* What are the relevant arguments to those methods, and the values of any relevant fields of the class?
-* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+* Which methods in your code are called: I called the main method and the handleRequest method.
+* What are the relevant arguments to those methods, and the values of any relevant fields of the class: The relevant argument to the main method includes when there's no port number and when there is port number then we should call the server to inplement the handleRequest method, and the relevant argument to that method includes checking if the url contains "/add-message". The relevant value would be the string array called parameters. The values would get changed.
+* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why: values of the parameters string array and the string array args got changed. parameters got changed and it now contains "s", "hello", "how are you". args now contains "4010".
+
 ![Image](lab2-2.png)
-* Which methods in your code are called?
-* What are the relevant arguments to those methods, and the values of any relevant fields of the class?
-* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+* Which methods in your code are called: the main method and the handleRequest method are called.
+* What are the relevant arguments to those methods, and the values of any relevant fields of the class: First, it checks in the main method to see if the args is empty, if it's empty then print the "missing port number" message, otherwise the handleRequest method is called. If url's path doesn't contain "/add-message", then the "Invalid input!" is returned. The relevant values would be the url, args and parameters.
+* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why: values of the parameters string array got changed. The values of the string array args stay the same, same as "4010" since I didn't change the port. But the got changed and it now contains "s", "hello", "how are you" and "Chenyu".
 
 # Part2
 * A failure-inducing input for the buggy program, as a JUnit test and any associated code:
