@@ -38,7 +38,7 @@ class StringServer {
 
 ![Image](lab2-1.png)
 * Which methods in your code are called: I called the main method and the handleRequest method.
-* What are the relevant arguments to those methods, and the values of any relevant fields of the class: The relevant argument to the main method includes when there's no port number and when there is port number then we should call the server to inplement the handleRequest method, and the relevant argument to that method includes checking if the url contains "/add-message". The relevant value would be the string array called parameters. The values would get changed.
+* What are the relevant arguments to those methods, and the values of any relevant fields of the class: The relevant argument to the main method includes when there's no port number and when there is port number (for port numbers, they're unique numbers assigned that is used to exchange formation between a web server and a web client) then we should call the server to inplement the handleRequest method, (handleRequest uses the URI built-in and its methods, getPath() and getQuery() to parse URL parts, print them out, and includes them in conditionals to determine browser behavior) and the relevant argument to that method includes checking if the url contains "/add-message". The relevant value would be the string array called parameters. The values would get changed.
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why: values of the parameters string array and the string array args got changed. parameters got changed and it now contains "s", "hello", "how are you". args now contains "4010".
 
 ![Image](lab2-2.png)
