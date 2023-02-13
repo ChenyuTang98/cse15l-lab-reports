@@ -67,7 +67,7 @@ class StringServer {
   }
 ```
 * The symptom, as the output of running the tests: The symptom tested for the testReversed1 method was “arrays first differed at element [0]; expected:<4> but was:<0>”
-![Image](lab2-3.png)
+![Image](lab2-3new.png)
 * The bug, as the before-and-after code change required to fix it: 
 
 before:
@@ -90,7 +90,7 @@ static int[] reversed(int[] arr) {
     return newArray;
   }
 ```
-* Briefly describe why the fix addresses the issue: first I switched the left hand side and right hand side of the assignment so that the values in arr are assigned to the newArray in reverse order. Then I changed the return statement to make it return the newArray instead of arr. 
+* Briefly describe why the fix addresses the issue: The problem with the code is that it makes the newArray, which we just created, an empty array's value get assigned to the arr. This is not right, everything would be cleared instead. So in order to address this, first I switched the left hand side and right hand side of the assignment so that the values in arr are assigned to the newArray in reverse order. Then I changed the return statement to make it return the newArray instead of arr. 
  
 # Part3
 The most important thing I learned is definitely writing the tester. It's really useful and necessary to see if there's any mistake on my code and why is that. Second thing is the URLHandler Interface and biuld URLs with paths and queries on the running server, though I still can't be sure how this exactly works and if I could do the codes right, but I have a much deeper understaning with the getquery() and split to check the parameter array index's value, and thus do the number increment or string printing. Also, using git and bash to connect to remote server and run on it.
