@@ -38,19 +38,21 @@ class StringServer {
 
 ![Image](lab2-1.png)
 * Which methods in your code are called: I called the main method and the handleRequest method.
-* What are the relevant arguments to those methods, and the values of any relevant fields of the class: The relevant argument to the main method includes when there's no port number and when there is port number (for port numbers, they're unique numbers assigned that is used to exchange formation between a web server and a web client) then we should call the server to inplement the handleRequest method, (handleRequest uses the URI built-in and its methods, getPath() and getQuery() to parse URL parts, print them out, and includes them in conditionals to determine browser behavior) and the relevant argument to that method includes checking if the url contains "/add-message". The relevant value would be the string array called parameters. The values would get changed.
-* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why: values of the parameters string array and the string array args got changed. parameters got changed and it now contains "s", "hello", "how are you". args now contains "4010".
+* What are the relevant arguments to those methods, and the values of any relevant fields of the class: The relevant argument to the main method includes when there's no port number and when there is port number (for port numbers, they're unique numbers assigned that is used to exchange formation between a web server and a web client) then we should call the server to inplement the handleRequest method, (handleRequest uses the URI built-in and its methods, getPath() and getQuery() to parse URL parts, print them out, and includes them in conditionals to determine browser behavior) and the relevant argument to that method includes checking if the url contains "/add-message". The relevant value would be the string array called parameters. The values would get changed, and would now contains "s", "hello", "how are you".(how this works are explained in next question)
+* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why: values of the parameters string array and the string array args got changed. parameters got changed and it now contains "s", "hello", "how are you". ConcatenatedString would now contains "hello" and "how are you" from the index 1 of parameter string. (for these parameters, they are stored due to previous two times' input after the '=' sign from getPath() and getQuery() method to parse URL parts, print them out, and includes them in conditionals to determine browser behavior), and args now contains "4010" because the port number I input in the main method, where any command line arguments are executed; in this case, taking a port number from the user to start a server. 
+
 
 ![Image](lab2-2.png)
 * Which methods in your code are called: the main method and the handleRequest method are called.
 * What are the relevant arguments to those methods, and the values of any relevant fields of the class: First, it checks in the main method to see if the args is empty, if it's empty then print the "missing port number" message, otherwise the handleRequest method is called. If url's path doesn't contain "/add-message", then the "Invalid input!" is returned. The relevant values would be the url, args and parameters.
-* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why: values of the parameters string array got changed. The values of the string array args stay the same, same as "4010" since I didn't change the port. But the parameters got changed and it now contains one more "Chenyu".
+* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why: values of the parameters string array got changed. The values of the string array args stay the same, same as "4010" since I didn't change the port. But the parameters got changed and it now contains one more "Chenyu". And the ConcatenatedString would now contains "hello" "how are you" and "Chenyu" from the index 1 of parameter string.
 
 # Part2
 * A failure-inducing input for the buggy program, as a JUnit test and any associated code:
 ```
 @Test
   public void testReversed1() {
+    // the input for this test case is 1, 2, 3, 4 and the expected output is 4, 3, 2, 1
     int[] input1 = {1, 2, 3, 4};
     assertArrayEquals(new int[]{4, 3, 2, 1}, ArrayExamples.reversed(input1));
   }
@@ -59,6 +61,7 @@ class StringServer {
 ```
 @Test
   public void testReversed2() {
+    // the input for this test case is 0, 0, 0, 0 and the expected output is 0, 0, 0, 0
     int[] input1 = {0, 0, 0, 0};
     assertArrayEquals(new int[]{0, 0, 0, 0}, ArrayExamples.reversed(input1));
   }
