@@ -1,4 +1,4 @@
-# Using -name *.txt to search files with txt pattern
+# Using -name to search for files with a specified name
 ```
 find ./Castro  -name "*.txt"
 ./Castro/chR.txt
@@ -17,6 +17,16 @@ find ./Castro  -name "*.txt"
 ./Castro/chO.txt
 ```
 
+```
+find ./Rybczynski -name "*.txt"
+./Rybczynski/ch2.txt
+./Rybczynski/ch3.txt
+./Rybczynski/ch1.txt
+```
+[Link](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
+Here I used find -name *.txt to find files with the certain pattern of ".txt" files. I looked into folders of Castro and Rybczynski. This command is good to find the certain pattern, especially when sometimes we only need .txt files, or .md files, etc.
+
+# Using -size to search for files with a specified size
 ```
 find ./berlitz2 -size +100                              
 ./berlitz2/Berlin-WhereToGo.txt
@@ -44,6 +54,7 @@ find ./berlitz2 -size +100
 ./berlitz2/Vallarta-WhereToGo.txt
 ./berlitz2/Cancun-WhereToGo.txt
 ```
+
 ```
 find ./travel_guides -size -10 
 ./travel_guides
@@ -63,3 +74,40 @@ find ./travel_guides -size -10
 ./travel_guides/berlitz1/HandRJerusalem.txt
 ./travel_guides/berlitz2
 ```
+[Link](https://www.redhat.com/sysadmin/linux-find-command)
+Here I used find -size +100 to search for files under berlitz2 folder with the size greater than 100 bytes, and find -size -10 to search for files under travel_guides folder with the size smaller than 10 bytes. The purpose of this is to find the certain file size with limits so sometimes when my storage is not enough so I can find really large files to choose to delete them.
+
+# Using -type d to search for files of a specified type(here is directory)
+```
+find ./travel_guides -type d
+./travel_guides
+./travel_guides/berlitz1
+./travel_guides/berlitz2
+```
+
+```
+find ./non-fiction -type d
+./non-fiction
+./non-fiction/OUP
+./non-fiction/OUP/Berk
+./non-fiction/OUP/Abernathy
+./non-fiction/OUP/Rybczynski
+./non-fiction/OUP/Kauffman
+./non-fiction/OUP/Fletcher
+./non-fiction/OUP/Castro
+```
+[Link](https://www.redhat.com/sysadmin/linux-find-command)
+Here I used find -type d to search for the directory under travel_guides folder and find the directory under non-fiction directory. The purpose for this is to look every directory under certain folders so that I could know which directory I'm goinging into if I only remember certain keywords.
+
+# Using -name ".txt" to search a file with specific name.
+```
+find ./berlitz2 -name "Beijing-History.txt"
+./berlitz2/Beijing-History.txt
+```
+
+```
+find ./Kauffman -name "ch4.txt"              
+./Kauffman/ch4.txt
+```
+[Link](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
+Here I used find -name "Beijing-History.txt" to find the this file I want under berlitz2 folder and fine -name "ch4.txt" to find this file from Kauffman folder. The purpose for this is that when sometimes I forgot where exactly is the specific file I'm looking for when I can only remember the file name.
