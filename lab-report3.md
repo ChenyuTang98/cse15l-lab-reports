@@ -123,6 +123,7 @@ Here I used `find ./travel_guides -type d` to search for the directory under tra
 find ./non-fiction -type d
 ```
 ### output:
+```
 ./non-fiction
 ./non-fiction/OUP
 ./non-fiction/OUP/Berk
