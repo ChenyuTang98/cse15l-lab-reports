@@ -1,4 +1,5 @@
-# Using -name to search for files with a specified name
+# Using `find -name` 
+This command is used to search for files with a specified name.
 ```
 find ./Castro  -name "*.txt"
 ./Castro/chR.txt
@@ -16,6 +17,7 @@ find ./Castro  -name "*.txt"
 ./Castro/chY.txt
 ./Castro/chO.txt
 ```
+Here I used find -name *.txt to find files with the certain pattern of ".txt" files under folder of Castro. And it shows all the files ended with `.txt`. This command is good to find the certain pattern, especially when sometimes we only need .txt files, or .md files, etc.
 
 ```
 find ./Rybczynski -name "*.txt"
@@ -24,7 +26,7 @@ find ./Rybczynski -name "*.txt"
 ./Rybczynski/ch1.txt
 ```
 [Link](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
-Here I used find -name *.txt to find files with the certain pattern of ".txt" files. I looked into folders of Castro and Rybczynski. This command is good to find the certain pattern, especially when sometimes we only need .txt files, or .md files, etc.
+Here I used find -name *.txt to find files with the certain pattern of ".txt" files under folder of Rybczynski. And it shows all the files ended with `.txt`. This command is good to find the certain pattern, especially when sometimes we only need .txt files, or .md files, etc.
 
 # Using -size to search for files with a specified size
 ```
