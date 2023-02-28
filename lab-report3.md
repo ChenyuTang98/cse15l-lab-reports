@@ -104,15 +104,25 @@ Here, I used `find ./travel_guides -size -10` to search for files under travel_g
 
 # Using `-type d`
 Here I used `find -type d` to list all the directories under the certain folder.
+Source: [Link](https://www.redhat.com/sysadmin/linux-find-command)
+## Example 1:
+### command:
 ```
 find ./travel_guides -type d
+```
+### output:
+```
 ./travel_guides
 ./travel_guides/berlitz1
 ./travel_guides/berlitz2
 ```
-
+Here I used `find ./travel_guides -type d` to search for the directory under travel_guides folder. And I got 2 directories under it. The purpose for this is to look every directory under certain folders so that I could know which directory I'm going into if I only remember certain keywords.
+## Example 2:
+### command:
 ```
 find ./non-fiction -type d
+```
+### output:
 ./non-fiction
 ./non-fiction/OUP
 ./non-fiction/OUP/Berk
@@ -122,8 +132,7 @@ find ./non-fiction -type d
 ./non-fiction/OUP/Fletcher
 ./non-fiction/OUP/Castro
 ```
-[Link](https://www.redhat.com/sysadmin/linux-find-command)
-Here I used find -type d to search for the directory under travel_guides folder and find the directory under non-fiction directory. The purpose for this is to look every directory under certain folders so that I could know which directory I'm goinging into if I only remember certain keywords.
+Here I used  find the directory under non-fiction directory. The purpose for this is to look every directory under certain folders so that I could know which directory I'm going into if I only remember certain keywords.
 
 # Using -name ".txt" to search a file with specific name.
 ```
