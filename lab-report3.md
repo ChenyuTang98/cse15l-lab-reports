@@ -137,4 +137,26 @@ Here I used  find the directory under non-fiction directory. The purpose for thi
 
 # Search files with case insensitive
 Source: [Link](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
-
+## Example 1:
+### command:
+```
+find . -iname "CH1.txt"
+```
+### output:
+```
+./Berk/ch1.txt
+./Abernathy/ch1.txt
+./Rybczynski/ch1.txt
+./Kauffman/ch1.txt
+./Fletcher/ch1.txt
+```
+## Example 2:
+### command:
+```
+find . -iname "ch4.txt"
+```
+### output:
+```
+./Berk/CH4.txt
+./Kauffman/ch4.txt
+```
