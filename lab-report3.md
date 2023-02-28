@@ -136,6 +136,7 @@ find ./non-fiction -type d
 Here I used  find the directory under non-fiction directory. The purpose for this is to look every directory under certain folders so that I could know which directory I'm going into if I only remember certain keywords.
 
 # Search files with case insensitive
+Here I used `find -iname` to do the case-insensitive search. The key for this is the use of the -iname option, which is only one character different from the -name option. The -iname option is what makes the search case-insensitive.
 Source: [Link](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
 ## Example 1:
 ### command:
@@ -150,6 +151,7 @@ find . -iname "CH1.txt"
 ./Kauffman/ch1.txt
 ./Fletcher/ch1.txt
 ```
+Here I used `find . -iname "CH1.txt"` command to find all the files contains the characters "CH1.txt" no matter if they're upper or lower cases under OUP folder. So I got bunch of lower-case "ch1.txt" files that are case-insensitive searches.
 ## Example 2:
 ### command:
 ```
@@ -160,3 +162,4 @@ find . -iname "ch4.txt"
 ./Berk/CH4.txt
 ./Kauffman/ch4.txt
 ```
+Here I used `find . -iname "ch4.txt"` command to find all the files contains the characters "ch4.txt" no matter if they're upper or lower cases under OUP folder. So I got one upper-case file "CH4.txt" under Berk folder and one lower-case file "ch4.txt" under Kauffman folder that are case-insensitive searches.
