@@ -13,3 +13,6 @@ To edit the code file to fix the failing test, first I used `nano ListExamples.j
 # Step 8:
 ![Image](4-5.png)
 to run the newly edited file, first i have to compile again. Here I used `<ctrl-R>` and type `javac` and the command `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` popped out, so I pressed `<Enter>` to compile. And then I used `<ctrl-R>` and type `java` and the command `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore` popped out, so I clicked `<Enter>` to run the java files. And it shows `OK` which means all the testers have passed.
+# Step 9:
+![Image](4-6.png)
+To commit and push the resulting change to my Github account. First, I typed `git add L<tab>` and it makes up with `git add ListExamples` and then I finished it with `.java` which makes the whole line `git add ListExamples.java` and then I pressed `<Enter>` to run the command. Then I typed `git commit -m "Updated"` to get commit messages. Finally, in order to push the changes to my account. I used `git push` and pressed `<Enter>` to run the command so the changes are made to my account.
