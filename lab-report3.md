@@ -1,7 +1,12 @@
 # Using `find -name` 
 This command is used to search for files with a specified name.
+## Example 1:
+### command:
 ```
 find ./Castro  -name "*.txt"
+```
+### output:
+```
 ./Castro/chR.txt
 ./Castro/chP.txt
 ./Castro/chQ.txt
@@ -79,7 +84,8 @@ find ./travel_guides -size -10
 [Link](https://www.redhat.com/sysadmin/linux-find-command)
 Here I used find -size +100 to search for files under berlitz2 folder with the size greater than 100 bytes, and find -size -10 to search for files under travel_guides folder with the size smaller than 10 bytes. The purpose of this is to find the certain file size with limits so sometimes when my storage is not enough so I can find really large files to choose to delete them.
 
-# Using -type d to search for files of a specified type(here is directory)
+# Using `-type d`
+Here I used `find -type d` to list all the directories under the certain folder.
 ```
 find ./travel_guides -type d
 ./travel_guides
