@@ -1,5 +1,5 @@
-# Using `find -name` 
-This command is used to search for files with a specified name.
+#  Search files with specified type ".txt"
+Using `find -name` to search for files with a specified name.
 source: [Link](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
 ## Example 1:
 ### command:
@@ -39,7 +39,7 @@ find ./Rybczynski -name "*.txt"
 
 Here I used find -name *.txt to find files with the certain pattern of ".txt" files under folder of Rybczynski. And it shows all the files ended with `.txt`. This command is good to find the certain pattern, especially when sometimes we only need .txt files, or .md files, etc.
 
-# Using `find -size` 
+# Search files and folders by size 
 Here I used `find -size` to search for files with a specified size.
 Source: [Link](https://www.redhat.com/sysadmin/linux-find-command)
 ## Example 1:
@@ -102,7 +102,7 @@ find ./travel_guides -size -10
 
 Here, I used `find ./travel_guides -size -10` to search for files under travel_guides folder with the size smaller than 10 bytes. The purpose of this is to find the certain file size with limits so sometimes when my storage is not enough so I can find really large files to choose to delete them.
 
-# Using `-type d`
+# List directories under specified path
 Here I used `find -type d` to list all the directories under the certain folder.
 Source: [Link](https://www.redhat.com/sysadmin/linux-find-command)
 ## Example 1:
@@ -135,15 +135,6 @@ find ./non-fiction -type d
 ```
 Here I used  find the directory under non-fiction directory. The purpose for this is to look every directory under certain folders so that I could know which directory I'm going into if I only remember certain keywords.
 
-# Using -name ".txt" to search a file with specific name.
-```
-find ./berlitz2 -name "Beijing-History.txt"
-./berlitz2/Beijing-History.txt
-```
+# Search files with case insensitive
+Source: [Link](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
 
-```
-find ./Kauffman -name "ch4.txt"              
-./Kauffman/ch4.txt
-```
-[Link](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
-Here I used find -name "Beijing-History.txt" to find the this file I want under berlitz2 folder and fine -name "ch4.txt" to find this file from Kauffman folder. The purpose for this is that when sometimes I forgot where exactly is the specific file I'm looking for when I can only remember the file name.
