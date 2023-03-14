@@ -45,7 +45,7 @@ Here I used `grep -l "Beijing" *` to sdisplay the files that contains the given 
 ## Example 2:
 ### command:
 ```
-grep -l "Athen" *
+grep -l "Athens" *
 ```
 ### output:
 ```
@@ -62,10 +62,10 @@ Crete-History.txt
 Crete-WhereToGo.txt
 ```
 
-Here I used `grep -l "Athen" *` to sdisplay the files that contains the given string "Athen". Here it means as long as the files contents contain the string "", then the file names would be displayed here. It is good for me to find the related articles containing the same keyword if I'm tring to do some researches.
+Here I used `grep -l "Athens" *` to sdisplay the files that contains the given string "Athens". Here it means as long as the files contents contain the string "Athens", then the file names would be displayed here. It is good for me to find the related articles containing the same keyword if I'm tring to do some researches.
 
-# List directories under specified path
-Here I used `find -type d` to list all the directories under the certain folder.
+# Displaying only the matched pattern
+Here I used `grep -o` to make the grep to display only the matched string by using the -o option.
 Source: [Link](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 ## Example 1:
 ### command:
@@ -106,7 +106,7 @@ Amsterdam
 Amsterdam
 Amsterdam
 ```
-Here I used `find ./travel_guides -type d` to search for the directory under travel_guides folder. And I got 2 directories under it. The purpose for this is to look every directory under certain folders so that I could know which directory I'm going into if I only remember certain keywords.
+Here I used `grep -o "Amsterdam" Amsterdam-WhatToDo.txt` to make the output only display the matches string "Amsterdam" by using the -o option in the given file "Amsterdam-WhatToDo.txt", instead of by default that grep displays the entire line which has the matched string. It is good when I only want to see the exactly matched word instead of dispalying the whole lines containing the word I'm looking for.
 ## Example 2:
 ### command:
 ```
@@ -138,7 +138,7 @@ China
 China
 China
 ```
-Here I used  find the directory under non-fiction directory. The purpose for this is to look every directory under certain folders so that I could know which directory I'm going into if I only remember certain keywords.
+Here I used `grep -o "China" Beijing-History.txt` to make the output only display the matches string "China" by using the -o optionin the given file "Beijing-History.txt", instead of by default that grep displays the entire line which has the matched string. It is good when I only want to see the exactly matched word instead of dispalying the whole lines containing the word I'm looking for.
 
 # Search files with case insensitive
 Here I used `grep -i` to do the case-insensitive search. The key for this is the use of the -i option, which is only one character different from the -name option. The -i option is what makes the search case-insensitive.
