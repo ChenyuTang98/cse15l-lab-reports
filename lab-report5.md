@@ -1,5 +1,5 @@
-#  Search files with specified type ".txt"
-Using `find -name` to search for files with a specified name.
+#  Displaying the count of number of matches
+Using `grep -c` to find the number of lines that matches the given string/pattern.
 source: [Link](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 ## Example 1:
 ### command:
@@ -10,22 +10,21 @@ grep -c "Amsterdam" Amsterdam-WhatToDo.txt
 ```
 23
 ```
-Here I used find -name *.txt to find files with the certain pattern of ".txt" files under folder of Castro. And it shows all the files ended with `.txt`. This command is good to find the certain pattern, especially when sometimes we only need .txt files, or .md files, etc.
-
+Here I used `grep -c "Amsterdam" Amsterdam-WhatToDo.txt` to find the number of lines that matches "Amsterdam" in the given file "Amsterdam-WhatToDo.txt". This is good for me to know how often the certain words have been used and also helps me to catch the main point if I'm reading some articles.  
 ## Example 2:
 ### command:
 ```
-grep -c "China" Beijing-History.tx
+grep -c "China" Beijing-History.txt
 ```
 ### output:
 ```
 14
 ```
 
-Here I used find -name *.txt to find files with the certain pattern of ".txt" files under folder of Rybczynski. And it shows all the files ended with `.txt`. This command is good to find the certain pattern, especially when sometimes we only need .txt files, or .md files, etc.
+Here I used `grep -c "China" Beijing-History.txt` to find the number of lines that matches "China" in the given file "Beijing-History.txt". This is good for me to know how often the certain words have been used and also helps me to catch the main point if I'm reading some articles. 
 
-# Search files and folders by size 
-Here I used `find -size` to search for files with a specified size.
+# Display the file names that matches the pattern 
+Here I used `grep -l` to display the files that contains the given string/pattern.
 Source: [Link](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 ## Example 1:
 ### command:
@@ -42,7 +41,7 @@ China-WhatToDo.txt
 China-WhereToGo.txt
 Cuba-WhereToGo.txt
 ```
-Here I used find `find ./berlitz2 -size +100` to search for files under berlitz2 folder with the size greater than 100 bytes. The purpose of this is to find the certain file size with limits so sometimes when my storage is not enough so I can find really large files to choose to delete them.
+Here I used `grep -l "Beijing" *` to sdisplay the files that contains the given string "Beijing". Here it means as long as the files contents contain the string "Beijing", then the file names would be displayed here. It is good for me to find the related articles containing the same keyword if I'm tring to do some researches.
 ## Example 2:
 ### command:
 ```
@@ -63,7 +62,7 @@ Crete-History.txt
 Crete-WhereToGo.txt
 ```
 
-Here, I used `find ./travel_guides -size -10` to search for files under travel_guides folder with the size smaller than 10 bytes. The purpose of this is to find the certain file size with limits so sometimes when my storage is not enough so I can find really large files to choose to delete them.
+Here I used `grep -l "Athen" *` to sdisplay the files that contains the given string "Athen". Here it means as long as the files contents contain the string "", then the file names would be displayed here. It is good for me to find the related articles containing the same keyword if I'm tring to do some researches.
 
 # List directories under specified path
 Here I used `find -type d` to list all the directories under the certain folder.
