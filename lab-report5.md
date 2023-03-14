@@ -1,6 +1,6 @@
 #  Search files with specified type ".txt"
 Using `find -name` to search for files with a specified name.
-source: [Link](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
+source: [Link](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 ## Example 1:
 ### command:
 ```
@@ -41,7 +41,7 @@ Here I used find -name *.txt to find files with the certain pattern of ".txt" fi
 
 # Search files and folders by size 
 Here I used `find -size` to search for files with a specified size.
-Source: [Link](https://www.redhat.com/sysadmin/linux-find-command)
+Source: [Link](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 ## Example 1:
 ### command:
 ```
@@ -104,7 +104,7 @@ Here, I used `find ./travel_guides -size -10` to search for files under travel_g
 
 # List directories under specified path
 Here I used `find -type d` to list all the directories under the certain folder.
-Source: [Link](https://www.redhat.com/sysadmin/linux-find-command)
+Source: [Link](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 ## Example 1:
 ### command:
 ```
@@ -136,30 +136,30 @@ find ./non-fiction -type d
 Here I used  find the directory under non-fiction directory. The purpose for this is to look every directory under certain folders so that I could know which directory I'm going into if I only remember certain keywords.
 
 # Search files with case insensitive
-Here I used `find -iname` to do the case-insensitive search. The key for this is the use of the -iname option, which is only one character different from the -name option. The -iname option is what makes the search case-insensitive.
-Source: [Link](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
+Here I used `grep -i` to do the case-insensitive search. The key for this is the use of the -i option, which is only one character different from the -name option. The -i option is what makes the search case-insensitive.
+Source: [Link](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 ## Example 1:
 ### command:
 ```
-find . -iname "CH1.txt"
+grep -i "hotels" HandRHongKong.txt
 ```
 ### output:
 ```
-./Berk/ch1.txt
-./Abernathy/ch1.txt
-./Rybczynski/ch1.txt
-./Kauffman/ch1.txt
-./Fletcher/ch1.txt
+Recommended Hotels
+Hong Kong has some of the most luxurious hotels in the
+Hotels listed below have full air-conditioning, offer 24-hour or
+limited room service, and a wide range of facilities. Hong Kong hotels
+occupancy, with bath or shower. Unless otherwise noted, hotels take all
 ```
-Here I used `find . -iname "CH1.txt"` command to find all the files contains the characters "CH1.txt" no matter if they're upper or lower cases under OUP folder. So I got bunch of lower-case "ch1.txt" files that are case-insensitive searches.
+Here I used `grep -i "hotels" HandRHongKong.txt` command to find all the matching string case-insensitive contains "hotels" no matter if they're upper or lower cases under berlitz1 folder in the given file "HandRHongKong.txt". So I got bunch of "Hotels" and "hotels" that are case-insensitive searches.
 ## Example 2:
 ### command:
 ```
-find . -iname "ch4.txt"
+grep -i "football" Amsterdam-WhatToDo.txt
 ```
 ### output:
 ```
-./Berk/CH4.txt
-./Kauffman/ch4.txt
+Football (Soccer)
+The Netherlands are football (soccer) crazy and Ajax is the Amsterdam team, one of the most successful in Europe over the last 30 years. They play at the Amsterdam Arena, a fine modern stadium, which is also used for other sporting events — but unfortunately it is almost impossible to obtain tickets for matches.
 ```
-Here I used `find . -iname "ch4.txt"` command to find all the files contains the characters "ch4.txt" no matter if they're upper or lower cases under OUP folder. So I got one upper-case file "CH4.txt" under Berk folder and one lower-case file "ch4.txt" under Kauffman folder that are case-insensitive searches.
+Here I used `grep -i "football" Amsterdam-WhatToDo.txt` command to find all the matching string case-insensitive contains "football" no matter if they're upper or lower cases under berlitz2 folder in the given file "Amsterdam-WhatToDo.txt". So I got bunch of "Football" and "football" that are case-insensitive searches.
